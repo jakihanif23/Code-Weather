@@ -42,14 +42,14 @@ class _HomePageState extends State<HomePage> {
     var dt = DateTime.now();
     var day = DateFormat('EEE').format(dt.add(Duration(days: 1)));
     return Scaffold(
-      body: SingleChildScrollView(
-        child: SafeArea(
-          child: FutureBuilder(
-              future: getData(),
-              builder: (context, snapshot) {
-                if (snapshot.connectionState == ConnectionState.done) {
-                  var a = data?.weather[0].main;
-                  return Flexible(
+      body: SafeArea(
+        child: FutureBuilder(
+            future: getData(),
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.done) {
+                var a = data?.weather[0].main;
+                return SingleChildScrollView(
+                  child: Flexible(
                     child: Container(
                       width: MediaQuery.of(context).size.width,
                       child: Column(
@@ -92,15 +92,15 @@ class _HomePageState extends State<HomePage> {
                         ],
                       ),
                     ),
-                  );
-                } else if (snapshot.connectionState == ConnectionState.waiting) {
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-                return Container();
-              }),
-        ),
+                  ),
+                );
+              } else if (snapshot.connectionState == ConnectionState.waiting) {
+                return const Center(
+                  child: CircularProgressIndicator(),
+                );
+              }
+              return Container();
+            }),
       ),
     );
   }
