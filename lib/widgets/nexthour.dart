@@ -24,8 +24,14 @@ class NextHour extends StatelessWidget {
           Expanded(
             child: Column(
               children: [
-                Text("${item}.00", style: TextStyle(color: Colors.black45),),
-                Icon(Icons.sunny, color: Colors.amberAccent,),
+                Text(
+                  "${item}.00",
+                  style: TextStyle(color: Colors.black45),
+                ),
+                Icon(
+                  Icons.sunny,
+                  color: Colors.amberAccent,
+                ),
                 Text('30 °C')
               ],
             ),
