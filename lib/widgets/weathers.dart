@@ -1,3 +1,7 @@
+import 'package:codeweather/fonts/custom_icons_icons.dart';
+import 'package:codeweather/widgets/weathers/cloud.dart';
+import 'package:codeweather/widgets/weathers/mist.dart';
+import 'package:codeweather/widgets/weathers/sunny.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -17,11 +21,7 @@ class WeatherCelcius extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.wb_sunny_rounded,
-              color: Colors.amberAccent,
-              size: 60,
-            ),
+            weather == 'Mist' ? Mist() : weather == 'Sunny' ? Sunny() : Cloud(),
             const SizedBox(
               width: 10,
             ),

@@ -16,6 +16,10 @@
 ///         Author:    Dave Gandy
 ///         License:   SIL ()
 ///         Homepage:  http://fortawesome.github.com/Font-Awesome/
+/// * Meteocons, Copyright (C) 2012 by Alessio Atzeni
+///         Author:    Alessio Atzeni
+///         License:   SIL (http://scripts.sil.org/OFL)
+///         Homepage:  http://www.alessioatzeni.com
 ///
 import 'package:flutter/widgets.dart';
 
@@ -26,5 +30,6 @@ class CustomIcons {
   static const String? _kFontPkg = null;
 
   static const IconData search = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData mist = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData sliders = IconData(0xf1de, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
